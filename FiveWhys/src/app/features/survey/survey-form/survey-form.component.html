@@ -1,0 +1,46 @@
+<div class="w-100 justify-content-center">
+  <div class="row align-items-center">
+    <div class="col-11">
+      <div [formGroup]="incidentForm">
+        <span class="p-float-label">
+          <input
+            class="w-100 p-inputtext-lg"
+            formControlName="cause"
+            id="incident"
+            pInputText
+            type="text"
+          />
+          <label for="incident">Incidente</label>
+        </span>
+      </div>
+    </div>
+    <div class="col-1">
+      <button
+        (click)="addSurvey()"
+        accesskey="n"
+        class="p-button-rounded p-button-success p-button-raised"
+        icon="pi pi-plus"
+        pButton
+        pRipple
+        type="button"
+      ></button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div #surveys class="p-2" id="survey-container">
+
+  </div>
+  <div class="row">
+    <button
+      (click)="saveIncident()"
+      class="p-button-success p-button-raised"
+      icon="pi pi-check"
+      iconPos="right"
+      label="Guardar Incidente"
+      pButton
+      pRipple
+      type="button"
+    ></button>
+  </div>
+</div>
